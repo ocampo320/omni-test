@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth_failure.dart';
 
@@ -20,27 +20,21 @@ mixin _$AuthFailure {
   TResult when<TResult extends Object?>({
     required TResult Function(String message) noData,
     required TResult Function() server,
-    required TResult Function() blockUser,
     required TResult Function(String message) noInternet,
-    required TResult Function() incorrectPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
+    TResult? Function(String message)? noData,
+    TResult? Function()? server,
+    TResult? Function(String message)? noInternet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? noData,
     TResult Function()? server,
-    TResult Function()? blockUser,
     TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,27 +42,21 @@ mixin _$AuthFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_NoData value) noData,
     required TResult Function(_Server value) server,
-    required TResult Function(_BlockUser value) blockUser,
     required TResult Function(NoInternet value) noInternet,
-    required TResult Function(IncorrectPassword value) incorrectPassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Server value)? server,
+    TResult? Function(NoInternet value)? noInternet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoData value)? noData,
     TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
     TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -78,40 +66,42 @@ mixin _$AuthFailure {
 abstract class $AuthFailureCopyWith<$Res> {
   factory $AuthFailureCopyWith(
           AuthFailure value, $Res Function(AuthFailure) then) =
-      _$AuthFailureCopyWithImpl<$Res>;
+      _$AuthFailureCopyWithImpl<$Res, AuthFailure>;
 }
 
 /// @nodoc
-class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
+class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
+    implements $AuthFailureCopyWith<$Res> {
   _$AuthFailureCopyWithImpl(this._value, this._then);
 
-  final AuthFailure _value;
   // ignore: unused_field
-  final $Res Function(AuthFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
 abstract class _$$_NoDataCopyWith<$Res> {
   factory _$$_NoDataCopyWith(_$_NoData value, $Res Function(_$_NoData) then) =
       __$$_NoDataCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$_NoDataCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
+class __$$_NoDataCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$_NoData>
     implements _$$_NoDataCopyWith<$Res> {
   __$$_NoDataCopyWithImpl(_$_NoData _value, $Res Function(_$_NoData) _then)
-      : super(_value, (v) => _then(v as _$_NoData));
+      : super(_value, _then);
 
-  @override
-  _$_NoData get _value => super._value as _$_NoData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$_NoData(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -137,15 +127,15 @@ class _$_NoData extends _NoData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NoData &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_NoDataCopyWith<_$_NoData> get copyWith =>
       __$$_NoDataCopyWithImpl<_$_NoData>(this, _$identity);
 
@@ -154,9 +144,7 @@ class _$_NoData extends _NoData {
   TResult when<TResult extends Object?>({
     required TResult Function(String message) noData,
     required TResult Function() server,
-    required TResult Function() blockUser,
     required TResult Function(String message) noInternet,
-    required TResult Function() incorrectPassword,
   }) {
     return noData(message);
   }
@@ -164,11 +152,9 @@ class _$_NoData extends _NoData {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
+    TResult? Function(String message)? noData,
+    TResult? Function()? server,
+    TResult? Function(String message)? noInternet,
   }) {
     return noData?.call(message);
   }
@@ -178,9 +164,7 @@ class _$_NoData extends _NoData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? noData,
     TResult Function()? server,
-    TResult Function()? blockUser,
     TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
     required TResult orElse(),
   }) {
     if (noData != null) {
@@ -194,9 +178,7 @@ class _$_NoData extends _NoData {
   TResult map<TResult extends Object?>({
     required TResult Function(_NoData value) noData,
     required TResult Function(_Server value) server,
-    required TResult Function(_BlockUser value) blockUser,
     required TResult Function(NoInternet value) noInternet,
-    required TResult Function(IncorrectPassword value) incorrectPassword,
   }) {
     return noData(this);
   }
@@ -204,11 +186,9 @@ class _$_NoData extends _NoData {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Server value)? server,
+    TResult? Function(NoInternet value)? noInternet,
   }) {
     return noData?.call(this);
   }
@@ -218,9 +198,7 @@ class _$_NoData extends _NoData {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoData value)? noData,
     TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
     TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
     required TResult orElse(),
   }) {
     if (noData != null) {
@@ -247,13 +225,11 @@ abstract class _$$_ServerCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ServerCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
+class __$$_ServerCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$_Server>
     implements _$$_ServerCopyWith<$Res> {
   __$$_ServerCopyWithImpl(_$_Server _value, $Res Function(_$_Server) _then)
-      : super(_value, (v) => _then(v as _$_Server));
-
-  @override
-  _$_Server get _value => super._value as _$_Server;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -280,9 +256,7 @@ class _$_Server extends _Server {
   TResult when<TResult extends Object?>({
     required TResult Function(String message) noData,
     required TResult Function() server,
-    required TResult Function() blockUser,
     required TResult Function(String message) noInternet,
-    required TResult Function() incorrectPassword,
   }) {
     return server();
   }
@@ -290,11 +264,9 @@ class _$_Server extends _Server {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
+    TResult? Function(String message)? noData,
+    TResult? Function()? server,
+    TResult? Function(String message)? noInternet,
   }) {
     return server?.call();
   }
@@ -304,9 +276,7 @@ class _$_Server extends _Server {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? noData,
     TResult Function()? server,
-    TResult Function()? blockUser,
     TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -320,9 +290,7 @@ class _$_Server extends _Server {
   TResult map<TResult extends Object?>({
     required TResult Function(_NoData value) noData,
     required TResult Function(_Server value) server,
-    required TResult Function(_BlockUser value) blockUser,
     required TResult Function(NoInternet value) noInternet,
-    required TResult Function(IncorrectPassword value) incorrectPassword,
   }) {
     return server(this);
   }
@@ -330,11 +298,9 @@ class _$_Server extends _Server {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Server value)? server,
+    TResult? Function(NoInternet value)? noInternet,
   }) {
     return server?.call(this);
   }
@@ -344,9 +310,7 @@ class _$_Server extends _Server {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoData value)? noData,
     TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
     TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -362,152 +326,29 @@ abstract class _Server extends AuthFailure {
 }
 
 /// @nodoc
-abstract class _$$_BlockUserCopyWith<$Res> {
-  factory _$$_BlockUserCopyWith(
-          _$_BlockUser value, $Res Function(_$_BlockUser) then) =
-      __$$_BlockUserCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_BlockUserCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
-    implements _$$_BlockUserCopyWith<$Res> {
-  __$$_BlockUserCopyWithImpl(
-      _$_BlockUser _value, $Res Function(_$_BlockUser) _then)
-      : super(_value, (v) => _then(v as _$_BlockUser));
-
-  @override
-  _$_BlockUser get _value => super._value as _$_BlockUser;
-}
-
-/// @nodoc
-
-class _$_BlockUser extends _BlockUser {
-  const _$_BlockUser() : super._();
-
-  @override
-  String toString() {
-    return 'AuthFailure.blockUser()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_BlockUser);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) noData,
-    required TResult Function() server,
-    required TResult Function() blockUser,
-    required TResult Function(String message) noInternet,
-    required TResult Function() incorrectPassword,
-  }) {
-    return blockUser();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
-  }) {
-    return blockUser?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
-    required TResult orElse(),
-  }) {
-    if (blockUser != null) {
-      return blockUser();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_NoData value) noData,
-    required TResult Function(_Server value) server,
-    required TResult Function(_BlockUser value) blockUser,
-    required TResult Function(NoInternet value) noInternet,
-    required TResult Function(IncorrectPassword value) incorrectPassword,
-  }) {
-    return blockUser(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
-  }) {
-    return blockUser?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
-    required TResult orElse(),
-  }) {
-    if (blockUser != null) {
-      return blockUser(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _BlockUser extends AuthFailure {
-  const factory _BlockUser() = _$_BlockUser;
-  const _BlockUser._() : super._();
-}
-
-/// @nodoc
 abstract class _$$NoInternetCopyWith<$Res> {
   factory _$$NoInternetCopyWith(
           _$NoInternet value, $Res Function(_$NoInternet) then) =
       __$$NoInternetCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$NoInternetCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
+class __$$NoInternetCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$NoInternet>
     implements _$$NoInternetCopyWith<$Res> {
   __$$NoInternetCopyWithImpl(
       _$NoInternet _value, $Res Function(_$NoInternet) _then)
-      : super(_value, (v) => _then(v as _$NoInternet));
+      : super(_value, _then);
 
-  @override
-  _$NoInternet get _value => super._value as _$NoInternet;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$NoInternet(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -533,15 +374,15 @@ class _$NoInternet extends NoInternet {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NoInternet &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$NoInternetCopyWith<_$NoInternet> get copyWith =>
       __$$NoInternetCopyWithImpl<_$NoInternet>(this, _$identity);
 
@@ -550,9 +391,7 @@ class _$NoInternet extends NoInternet {
   TResult when<TResult extends Object?>({
     required TResult Function(String message) noData,
     required TResult Function() server,
-    required TResult Function() blockUser,
     required TResult Function(String message) noInternet,
-    required TResult Function() incorrectPassword,
   }) {
     return noInternet(message);
   }
@@ -560,11 +399,9 @@ class _$NoInternet extends NoInternet {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
+    TResult? Function(String message)? noData,
+    TResult? Function()? server,
+    TResult? Function(String message)? noInternet,
   }) {
     return noInternet?.call(message);
   }
@@ -574,9 +411,7 @@ class _$NoInternet extends NoInternet {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? noData,
     TResult Function()? server,
-    TResult Function()? blockUser,
     TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -590,9 +425,7 @@ class _$NoInternet extends NoInternet {
   TResult map<TResult extends Object?>({
     required TResult Function(_NoData value) noData,
     required TResult Function(_Server value) server,
-    required TResult Function(_BlockUser value) blockUser,
     required TResult Function(NoInternet value) noInternet,
-    required TResult Function(IncorrectPassword value) incorrectPassword,
   }) {
     return noInternet(this);
   }
@@ -600,11 +433,9 @@ class _$NoInternet extends NoInternet {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
+    TResult? Function(_NoData value)? noData,
+    TResult? Function(_Server value)? server,
+    TResult? Function(NoInternet value)? noInternet,
   }) {
     return noInternet?.call(this);
   }
@@ -614,9 +445,7 @@ class _$NoInternet extends NoInternet {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoData value)? noData,
     TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
     TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
     required TResult orElse(),
   }) {
     if (noInternet != null) {
@@ -634,128 +463,4 @@ abstract class NoInternet extends AuthFailure {
   @JsonKey(ignore: true)
   _$$NoInternetCopyWith<_$NoInternet> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IncorrectPasswordCopyWith<$Res> {
-  factory _$$IncorrectPasswordCopyWith(
-          _$IncorrectPassword value, $Res Function(_$IncorrectPassword) then) =
-      __$$IncorrectPasswordCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$IncorrectPasswordCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements _$$IncorrectPasswordCopyWith<$Res> {
-  __$$IncorrectPasswordCopyWithImpl(
-      _$IncorrectPassword _value, $Res Function(_$IncorrectPassword) _then)
-      : super(_value, (v) => _then(v as _$IncorrectPassword));
-
-  @override
-  _$IncorrectPassword get _value => super._value as _$IncorrectPassword;
-}
-
-/// @nodoc
-
-class _$IncorrectPassword extends IncorrectPassword {
-  const _$IncorrectPassword() : super._();
-
-  @override
-  String toString() {
-    return 'AuthFailure.incorrectPassword()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$IncorrectPassword);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) noData,
-    required TResult Function() server,
-    required TResult Function() blockUser,
-    required TResult Function(String message) noInternet,
-    required TResult Function() incorrectPassword,
-  }) {
-    return incorrectPassword();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
-  }) {
-    return incorrectPassword?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? noData,
-    TResult Function()? server,
-    TResult Function()? blockUser,
-    TResult Function(String message)? noInternet,
-    TResult Function()? incorrectPassword,
-    required TResult orElse(),
-  }) {
-    if (incorrectPassword != null) {
-      return incorrectPassword();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_NoData value) noData,
-    required TResult Function(_Server value) server,
-    required TResult Function(_BlockUser value) blockUser,
-    required TResult Function(NoInternet value) noInternet,
-    required TResult Function(IncorrectPassword value) incorrectPassword,
-  }) {
-    return incorrectPassword(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
-  }) {
-    return incorrectPassword?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_Server value)? server,
-    TResult Function(_BlockUser value)? blockUser,
-    TResult Function(NoInternet value)? noInternet,
-    TResult Function(IncorrectPassword value)? incorrectPassword,
-    required TResult orElse(),
-  }) {
-    if (incorrectPassword != null) {
-      return incorrectPassword(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class IncorrectPassword extends AuthFailure {
-  const factory IncorrectPassword() = _$IncorrectPassword;
-  const IncorrectPassword._() : super._();
 }

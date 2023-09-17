@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'common_failure.dart';
 
@@ -28,11 +28,11 @@ mixin _$CommonFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
+    TResult? Function(String message)? data,
+    TResult? Function(String message)? noData,
+    TResult? Function(String message, int code)? server,
+    TResult? Function(String message)? noConnection,
+    TResult? Function(String message)? userLevel,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,11 +56,11 @@ mixin _$CommonFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
+    TResult? Function(DataFailure value)? data,
+    TResult? Function(NoDataFailure value)? noData,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(NoConnectionFailure value)? noConnection,
+    TResult? Function(_UserLevel value)? userLevel,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,29 +83,32 @@ mixin _$CommonFailure {
 abstract class $CommonFailureCopyWith<$Res> {
   factory $CommonFailureCopyWith(
           CommonFailure value, $Res Function(CommonFailure) then) =
-      _$CommonFailureCopyWithImpl<$Res>;
+      _$CommonFailureCopyWithImpl<$Res, CommonFailure>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$CommonFailureCopyWithImpl<$Res>
+class _$CommonFailureCopyWithImpl<$Res, $Val extends CommonFailure>
     implements $CommonFailureCopyWith<$Res> {
   _$CommonFailureCopyWithImpl(this._value, this._then);
 
-  final CommonFailure _value;
   // ignore: unused_field
-  final $Res Function(CommonFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_value.copyWith(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -116,26 +119,25 @@ abstract class _$$DataFailureCopyWith<$Res>
           _$DataFailure value, $Res Function(_$DataFailure) then) =
       __$$DataFailureCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
 class __$$DataFailureCopyWithImpl<$Res>
-    extends _$CommonFailureCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$DataFailure>
     implements _$$DataFailureCopyWith<$Res> {
   __$$DataFailureCopyWithImpl(
       _$DataFailure _value, $Res Function(_$DataFailure) _then)
-      : super(_value, (v) => _then(v as _$DataFailure));
+      : super(_value, _then);
 
-  @override
-  _$DataFailure get _value => super._value as _$DataFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$DataFailure(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -161,15 +163,15 @@ class _$DataFailure extends DataFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataFailure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$DataFailureCopyWith<_$DataFailure> get copyWith =>
       __$$DataFailureCopyWithImpl<_$DataFailure>(this, _$identity);
 
@@ -188,11 +190,11 @@ class _$DataFailure extends DataFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
+    TResult? Function(String message)? data,
+    TResult? Function(String message)? noData,
+    TResult? Function(String message, int code)? server,
+    TResult? Function(String message)? noConnection,
+    TResult? Function(String message)? userLevel,
   }) {
     return data?.call(message);
   }
@@ -228,11 +230,11 @@ class _$DataFailure extends DataFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
+    TResult? Function(DataFailure value)? data,
+    TResult? Function(NoDataFailure value)? noData,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(NoConnectionFailure value)? noConnection,
+    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return data?.call(this);
   }
@@ -273,26 +275,25 @@ abstract class _$$NoDataFailureCopyWith<$Res>
           _$NoDataFailure value, $Res Function(_$NoDataFailure) then) =
       __$$NoDataFailureCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
 class __$$NoDataFailureCopyWithImpl<$Res>
-    extends _$CommonFailureCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$NoDataFailure>
     implements _$$NoDataFailureCopyWith<$Res> {
   __$$NoDataFailureCopyWithImpl(
       _$NoDataFailure _value, $Res Function(_$NoDataFailure) _then)
-      : super(_value, (v) => _then(v as _$NoDataFailure));
+      : super(_value, _then);
 
-  @override
-  _$NoDataFailure get _value => super._value as _$NoDataFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$NoDataFailure(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -318,15 +319,15 @@ class _$NoDataFailure extends NoDataFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NoDataFailure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$NoDataFailureCopyWith<_$NoDataFailure> get copyWith =>
       __$$NoDataFailureCopyWithImpl<_$NoDataFailure>(this, _$identity);
 
@@ -345,11 +346,11 @@ class _$NoDataFailure extends NoDataFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
+    TResult? Function(String message)? data,
+    TResult? Function(String message)? noData,
+    TResult? Function(String message, int code)? server,
+    TResult? Function(String message)? noConnection,
+    TResult? Function(String message)? userLevel,
   }) {
     return noData?.call(message);
   }
@@ -385,11 +386,11 @@ class _$NoDataFailure extends NoDataFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
+    TResult? Function(DataFailure value)? data,
+    TResult? Function(NoDataFailure value)? noData,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(NoConnectionFailure value)? noConnection,
+    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return noData?.call(this);
   }
@@ -431,31 +432,30 @@ abstract class _$$ServerFailureCopyWith<$Res>
           _$ServerFailure value, $Res Function(_$ServerFailure) then) =
       __$$ServerFailureCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message, int code});
 }
 
 /// @nodoc
 class __$$ServerFailureCopyWithImpl<$Res>
-    extends _$CommonFailureCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$ServerFailure>
     implements _$$ServerFailureCopyWith<$Res> {
   __$$ServerFailureCopyWithImpl(
       _$ServerFailure _value, $Res Function(_$ServerFailure) _then)
-      : super(_value, (v) => _then(v as _$ServerFailure));
+      : super(_value, _then);
 
-  @override
-  _$ServerFailure get _value => super._value as _$ServerFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
-    Object? code = freezed,
+    Object? message = null,
+    Object? code = null,
   }) {
     return _then(_$ServerFailure(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as int,
@@ -484,18 +484,16 @@ class _$ServerFailure extends ServerFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServerFailure &&
-            const DeepCollectionEquality().equals(other.message, message) &&
-            const DeepCollectionEquality().equals(other.code, code));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.code, code) || other.code == code));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(message),
-      const DeepCollectionEquality().hash(code));
+  int get hashCode => Object.hash(runtimeType, message, code);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ServerFailureCopyWith<_$ServerFailure> get copyWith =>
       __$$ServerFailureCopyWithImpl<_$ServerFailure>(this, _$identity);
 
@@ -514,11 +512,11 @@ class _$ServerFailure extends ServerFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
+    TResult? Function(String message)? data,
+    TResult? Function(String message)? noData,
+    TResult? Function(String message, int code)? server,
+    TResult? Function(String message)? noConnection,
+    TResult? Function(String message)? userLevel,
   }) {
     return server?.call(message, code);
   }
@@ -554,11 +552,11 @@ class _$ServerFailure extends ServerFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
+    TResult? Function(DataFailure value)? data,
+    TResult? Function(NoDataFailure value)? noData,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(NoConnectionFailure value)? noConnection,
+    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return server?.call(this);
   }
@@ -602,26 +600,25 @@ abstract class _$$NoConnectionFailureCopyWith<$Res>
           $Res Function(_$NoConnectionFailure) then) =
       __$$NoConnectionFailureCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
 class __$$NoConnectionFailureCopyWithImpl<$Res>
-    extends _$CommonFailureCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$NoConnectionFailure>
     implements _$$NoConnectionFailureCopyWith<$Res> {
   __$$NoConnectionFailureCopyWithImpl(
       _$NoConnectionFailure _value, $Res Function(_$NoConnectionFailure) _then)
-      : super(_value, (v) => _then(v as _$NoConnectionFailure));
+      : super(_value, _then);
 
-  @override
-  _$NoConnectionFailure get _value => super._value as _$NoConnectionFailure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$NoConnectionFailure(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -647,15 +644,15 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NoConnectionFailure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$NoConnectionFailureCopyWith<_$NoConnectionFailure> get copyWith =>
       __$$NoConnectionFailureCopyWithImpl<_$NoConnectionFailure>(
           this, _$identity);
@@ -675,11 +672,11 @@ class _$NoConnectionFailure extends NoConnectionFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
+    TResult? Function(String message)? data,
+    TResult? Function(String message)? noData,
+    TResult? Function(String message, int code)? server,
+    TResult? Function(String message)? noConnection,
+    TResult? Function(String message)? userLevel,
   }) {
     return noConnection?.call(message);
   }
@@ -715,11 +712,11 @@ class _$NoConnectionFailure extends NoConnectionFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
+    TResult? Function(DataFailure value)? data,
+    TResult? Function(NoDataFailure value)? noData,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(NoConnectionFailure value)? noConnection,
+    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return noConnection?.call(this);
   }
@@ -761,25 +758,25 @@ abstract class _$$_UserLevelCopyWith<$Res>
           _$_UserLevel value, $Res Function(_$_UserLevel) then) =
       __$$_UserLevelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$_UserLevelCopyWithImpl<$Res> extends _$CommonFailureCopyWithImpl<$Res>
+class __$$_UserLevelCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$_UserLevel>
     implements _$$_UserLevelCopyWith<$Res> {
   __$$_UserLevelCopyWithImpl(
       _$_UserLevel _value, $Res Function(_$_UserLevel) _then)
-      : super(_value, (v) => _then(v as _$_UserLevel));
+      : super(_value, _then);
 
-  @override
-  _$_UserLevel get _value => super._value as _$_UserLevel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_$_UserLevel(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -805,15 +802,15 @@ class _$_UserLevel extends _UserLevel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UserLevel &&
-            const DeepCollectionEquality().equals(other.message, message));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UserLevelCopyWith<_$_UserLevel> get copyWith =>
       __$$_UserLevelCopyWithImpl<_$_UserLevel>(this, _$identity);
 
@@ -832,11 +829,11 @@ class _$_UserLevel extends _UserLevel {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
+    TResult? Function(String message)? data,
+    TResult? Function(String message)? noData,
+    TResult? Function(String message, int code)? server,
+    TResult? Function(String message)? noConnection,
+    TResult? Function(String message)? userLevel,
   }) {
     return userLevel?.call(message);
   }
@@ -872,11 +869,11 @@ class _$_UserLevel extends _UserLevel {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
+    TResult? Function(DataFailure value)? data,
+    TResult? Function(NoDataFailure value)? noData,
+    TResult? Function(ServerFailure value)? server,
+    TResult? Function(NoConnectionFailure value)? noConnection,
+    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return userLevel?.call(this);
   }
