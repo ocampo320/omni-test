@@ -23,6 +23,4 @@ class CommonFailure with _$CommonFailure {
   const factory CommonFailure.noConnection({required String message}) =
       NoConnectionFailure;
 
-  /// When user is Level 2 should handle this exception, message should be the accessToken;
-  const factory CommonFailure.userLevel({required String message}) = _UserLevel;
 }

@@ -18,7 +18,7 @@ class PhotoService {
           return Photo.fromJson(
               data); // Implementa este método según tu modelo de datos
         }).toList();
-        print(photos);
+      
         return photos;
       } else {
         throw Exception("Error al consumir el servicio");

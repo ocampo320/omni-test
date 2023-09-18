@@ -5,10 +5,20 @@ import 'package:omni_test/blocs/home_event.dart';
 import 'package:omni_test/blocs/home_state.dart';
 import 'package:omni_test/presentation/widgets/list_card.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<HomeBloc>().add(HomeStarted());
+  }
+
   Widget build(BuildContext context) {
     context.read<HomeBloc>().add(HomeStarted());
     return BlocBuilder<HomeBloc, BlocState>(
@@ -16,12 +26,10 @@ class HomeScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(),
           body: SafeArea(
-            child:ListCard(state: state,)
+            child: ListCard(),
           ),
         );
       },
     );
   }
-
-
 }

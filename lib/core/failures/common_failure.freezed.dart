@@ -23,7 +23,6 @@ mixin _$CommonFailure {
     required TResult Function(String message) noData,
     required TResult Function(String message, int code) server,
     required TResult Function(String message) noConnection,
-    required TResult Function(String message) userLevel,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,7 +31,6 @@ mixin _$CommonFailure {
     TResult? Function(String message)? noData,
     TResult? Function(String message, int code)? server,
     TResult? Function(String message)? noConnection,
-    TResult? Function(String message)? userLevel,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,7 +39,6 @@ mixin _$CommonFailure {
     TResult Function(String message)? noData,
     TResult Function(String message, int code)? server,
     TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,7 +48,6 @@ mixin _$CommonFailure {
     required TResult Function(NoDataFailure value) noData,
     required TResult Function(ServerFailure value) server,
     required TResult Function(NoConnectionFailure value) noConnection,
-    required TResult Function(_UserLevel value) userLevel,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,7 +56,6 @@ mixin _$CommonFailure {
     TResult? Function(NoDataFailure value)? noData,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(NoConnectionFailure value)? noConnection,
-    TResult? Function(_UserLevel value)? userLevel,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,7 +64,6 @@ mixin _$CommonFailure {
     TResult Function(NoDataFailure value)? noData,
     TResult Function(ServerFailure value)? server,
     TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -182,7 +176,6 @@ class _$DataFailure extends DataFailure {
     required TResult Function(String message) noData,
     required TResult Function(String message, int code) server,
     required TResult Function(String message) noConnection,
-    required TResult Function(String message) userLevel,
   }) {
     return data(message);
   }
@@ -194,7 +187,6 @@ class _$DataFailure extends DataFailure {
     TResult? Function(String message)? noData,
     TResult? Function(String message, int code)? server,
     TResult? Function(String message)? noConnection,
-    TResult? Function(String message)? userLevel,
   }) {
     return data?.call(message);
   }
@@ -206,7 +198,6 @@ class _$DataFailure extends DataFailure {
     TResult Function(String message)? noData,
     TResult Function(String message, int code)? server,
     TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -222,7 +213,6 @@ class _$DataFailure extends DataFailure {
     required TResult Function(NoDataFailure value) noData,
     required TResult Function(ServerFailure value) server,
     required TResult Function(NoConnectionFailure value) noConnection,
-    required TResult Function(_UserLevel value) userLevel,
   }) {
     return data(this);
   }
@@ -234,7 +224,6 @@ class _$DataFailure extends DataFailure {
     TResult? Function(NoDataFailure value)? noData,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(NoConnectionFailure value)? noConnection,
-    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return data?.call(this);
   }
@@ -246,7 +235,6 @@ class _$DataFailure extends DataFailure {
     TResult Function(NoDataFailure value)? noData,
     TResult Function(ServerFailure value)? server,
     TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -338,7 +326,6 @@ class _$NoDataFailure extends NoDataFailure {
     required TResult Function(String message) noData,
     required TResult Function(String message, int code) server,
     required TResult Function(String message) noConnection,
-    required TResult Function(String message) userLevel,
   }) {
     return noData(message);
   }
@@ -350,7 +337,6 @@ class _$NoDataFailure extends NoDataFailure {
     TResult? Function(String message)? noData,
     TResult? Function(String message, int code)? server,
     TResult? Function(String message)? noConnection,
-    TResult? Function(String message)? userLevel,
   }) {
     return noData?.call(message);
   }
@@ -362,7 +348,6 @@ class _$NoDataFailure extends NoDataFailure {
     TResult Function(String message)? noData,
     TResult Function(String message, int code)? server,
     TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
     required TResult orElse(),
   }) {
     if (noData != null) {
@@ -378,7 +363,6 @@ class _$NoDataFailure extends NoDataFailure {
     required TResult Function(NoDataFailure value) noData,
     required TResult Function(ServerFailure value) server,
     required TResult Function(NoConnectionFailure value) noConnection,
-    required TResult Function(_UserLevel value) userLevel,
   }) {
     return noData(this);
   }
@@ -390,7 +374,6 @@ class _$NoDataFailure extends NoDataFailure {
     TResult? Function(NoDataFailure value)? noData,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(NoConnectionFailure value)? noConnection,
-    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return noData?.call(this);
   }
@@ -402,7 +385,6 @@ class _$NoDataFailure extends NoDataFailure {
     TResult Function(NoDataFailure value)? noData,
     TResult Function(ServerFailure value)? server,
     TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
     required TResult orElse(),
   }) {
     if (noData != null) {
@@ -504,7 +486,6 @@ class _$ServerFailure extends ServerFailure {
     required TResult Function(String message) noData,
     required TResult Function(String message, int code) server,
     required TResult Function(String message) noConnection,
-    required TResult Function(String message) userLevel,
   }) {
     return server(message, code);
   }
@@ -516,7 +497,6 @@ class _$ServerFailure extends ServerFailure {
     TResult? Function(String message)? noData,
     TResult? Function(String message, int code)? server,
     TResult? Function(String message)? noConnection,
-    TResult? Function(String message)? userLevel,
   }) {
     return server?.call(message, code);
   }
@@ -528,7 +508,6 @@ class _$ServerFailure extends ServerFailure {
     TResult Function(String message)? noData,
     TResult Function(String message, int code)? server,
     TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -544,7 +523,6 @@ class _$ServerFailure extends ServerFailure {
     required TResult Function(NoDataFailure value) noData,
     required TResult Function(ServerFailure value) server,
     required TResult Function(NoConnectionFailure value) noConnection,
-    required TResult Function(_UserLevel value) userLevel,
   }) {
     return server(this);
   }
@@ -556,7 +534,6 @@ class _$ServerFailure extends ServerFailure {
     TResult? Function(NoDataFailure value)? noData,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(NoConnectionFailure value)? noConnection,
-    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return server?.call(this);
   }
@@ -568,7 +545,6 @@ class _$ServerFailure extends ServerFailure {
     TResult Function(NoDataFailure value)? noData,
     TResult Function(ServerFailure value)? server,
     TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -664,7 +640,6 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     required TResult Function(String message) noData,
     required TResult Function(String message, int code) server,
     required TResult Function(String message) noConnection,
-    required TResult Function(String message) userLevel,
   }) {
     return noConnection(message);
   }
@@ -676,7 +651,6 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     TResult? Function(String message)? noData,
     TResult? Function(String message, int code)? server,
     TResult? Function(String message)? noConnection,
-    TResult? Function(String message)? userLevel,
   }) {
     return noConnection?.call(message);
   }
@@ -688,7 +662,6 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     TResult Function(String message)? noData,
     TResult Function(String message, int code)? server,
     TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
     required TResult orElse(),
   }) {
     if (noConnection != null) {
@@ -704,7 +677,6 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     required TResult Function(NoDataFailure value) noData,
     required TResult Function(ServerFailure value) server,
     required TResult Function(NoConnectionFailure value) noConnection,
-    required TResult Function(_UserLevel value) userLevel,
   }) {
     return noConnection(this);
   }
@@ -716,7 +688,6 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     TResult? Function(NoDataFailure value)? noData,
     TResult? Function(ServerFailure value)? server,
     TResult? Function(NoConnectionFailure value)? noConnection,
-    TResult? Function(_UserLevel value)? userLevel,
   }) {
     return noConnection?.call(this);
   }
@@ -728,7 +699,6 @@ class _$NoConnectionFailure extends NoConnectionFailure {
     TResult Function(NoDataFailure value)? noData,
     TResult Function(ServerFailure value)? server,
     TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
     required TResult orElse(),
   }) {
     if (noConnection != null) {
@@ -748,161 +718,5 @@ abstract class NoConnectionFailure extends CommonFailure {
   @override
   @JsonKey(ignore: true)
   _$$NoConnectionFailureCopyWith<_$NoConnectionFailure> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$_UserLevelCopyWith<$Res>
-    implements $CommonFailureCopyWith<$Res> {
-  factory _$$_UserLevelCopyWith(
-          _$_UserLevel value, $Res Function(_$_UserLevel) then) =
-      __$$_UserLevelCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$_UserLevelCopyWithImpl<$Res>
-    extends _$CommonFailureCopyWithImpl<$Res, _$_UserLevel>
-    implements _$$_UserLevelCopyWith<$Res> {
-  __$$_UserLevelCopyWithImpl(
-      _$_UserLevel _value, $Res Function(_$_UserLevel) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$_UserLevel(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_UserLevel extends _UserLevel {
-  const _$_UserLevel({required this.message}) : super._();
-
-  @override
-  final String message;
-
-  @override
-  String toString() {
-    return 'CommonFailure.userLevel(message: $message)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_UserLevel &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_UserLevelCopyWith<_$_UserLevel> get copyWith =>
-      __$$_UserLevelCopyWithImpl<_$_UserLevel>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) data,
-    required TResult Function(String message) noData,
-    required TResult Function(String message, int code) server,
-    required TResult Function(String message) noConnection,
-    required TResult Function(String message) userLevel,
-  }) {
-    return userLevel(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? data,
-    TResult? Function(String message)? noData,
-    TResult? Function(String message, int code)? server,
-    TResult? Function(String message)? noConnection,
-    TResult? Function(String message)? userLevel,
-  }) {
-    return userLevel?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? data,
-    TResult Function(String message)? noData,
-    TResult Function(String message, int code)? server,
-    TResult Function(String message)? noConnection,
-    TResult Function(String message)? userLevel,
-    required TResult orElse(),
-  }) {
-    if (userLevel != null) {
-      return userLevel(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(DataFailure value) data,
-    required TResult Function(NoDataFailure value) noData,
-    required TResult Function(ServerFailure value) server,
-    required TResult Function(NoConnectionFailure value) noConnection,
-    required TResult Function(_UserLevel value) userLevel,
-  }) {
-    return userLevel(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(DataFailure value)? data,
-    TResult? Function(NoDataFailure value)? noData,
-    TResult? Function(ServerFailure value)? server,
-    TResult? Function(NoConnectionFailure value)? noConnection,
-    TResult? Function(_UserLevel value)? userLevel,
-  }) {
-    return userLevel?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(DataFailure value)? data,
-    TResult Function(NoDataFailure value)? noData,
-    TResult Function(ServerFailure value)? server,
-    TResult Function(NoConnectionFailure value)? noConnection,
-    TResult Function(_UserLevel value)? userLevel,
-    required TResult orElse(),
-  }) {
-    if (userLevel != null) {
-      return userLevel(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UserLevel extends CommonFailure {
-  const factory _UserLevel({required final String message}) = _$_UserLevel;
-  const _UserLevel._() : super._();
-
-  @override
-  String get message;
-  @override
-  @JsonKey(ignore: true)
-  _$$_UserLevelCopyWith<_$_UserLevel> get copyWith =>
       throw _privateConstructorUsedError;
 }
