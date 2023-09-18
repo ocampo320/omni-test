@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:omni_test/blocs/home_bloc.dart';
 import 'package:omni_test/blocs/home_event.dart';
 import 'package:omni_test/blocs/home_state.dart';
+import 'package:omni_test/core/constants/app_localizations.dart';
 import 'package:omni_test/core/typographies.dart';
 import 'package:omni_test/presentation/widgets/error_container.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -12,6 +13,7 @@ class ListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AppLocalizations localizations = AppLocalizations.of(context);
     return BlocBuilder<HomeBloc, BlocState>(
       builder: (context, state) {
         if (state is InitialState) {
@@ -72,7 +74,7 @@ class ListCard extends StatelessWidget {
                     onPressed: () {
                       context.read<HomeBloc>().add(const LoadMorePhotos());
                     },
-                    child: const Text("Cargar más"),
+                    child: Text(localizations.getLocalizedValue("load")),
                   ),
                 );
               }

@@ -16,12 +16,12 @@ class PhotoService {
 
         final List<Photo> photos = jsonData.map((data) {
           return Photo.fromJson(
-              data); // Implementa este método según tu modelo de datos
+              data); 
         }).toList();
       
         return photos;
       } else {
-        throw Exception("Error al consumir el servicio");
+        throw Exception(   "Error al consumir el servicio");
       }
     } catch (e) {
       throw 'Error en la llamada a la API: $e';

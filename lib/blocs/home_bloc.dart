@@ -47,7 +47,7 @@ class HomeBloc extends Bloc<HomeEvent, BlocState> {
     final endIndex = startIndex + itemsPerPage;
 
     if (startIndex < endIndex) {
-      emit(LoadingState());
+      emit(const LoadingState());
       final photosToAdd = allPhotos.sublist(startIndex, endIndex);
 
       if (photosToAdd.isNotEmpty) {
@@ -62,7 +62,7 @@ class HomeBloc extends Bloc<HomeEvent, BlocState> {
     }
   } catch (error) {
     emit( ErrorState(
-      failure: CommonFailure.noData(
+      failure: const CommonFailure.noData(
         message: "No se pudieron cargar más datos.",
       ),
     ));
