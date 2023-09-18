@@ -52,6 +52,7 @@ dependencies:
   nock: ^1.2.3
   freezed_annotation: ^2.4.1
   json_annotation: ^4.3.0
+  bloc_test: ^9.1.4
   
   
 
