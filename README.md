@@ -23,4 +23,39 @@ Asegúrate de tener las siguientes herramientas y recursos instalados en tu ento
 Siga estos pasos para configurar y ejecutar la aplicación en su entorno de desarrollo:
 
 1. **Clona el Repositorio**: Clona este repositorio en tu máquina local.
+(https://github.com/ocampo320/omni-test.git)
+
+
+2. **Instala Dependencias**: Abre una terminal en el directorio del proyecto y ejecuta el siguiente comando para instalar todas las dependencias necesarias:
+ flutter pub get
+
+
+3. **Configura Firebase**: Configura Firebase en tu proyecto siguiendo las instrucciones de Firebase (https://firebase.google.com/docs/flutter/setup).
+
+4. **Configura Firebase Remote Config**: Configura Firebase Remote Config para la gestión de localización siguiendo las instrucciones de Firebase Remote Config (https://firebase.google.com/docs/remote-config).
+
+5. **Ejecuta la Aplicación**: Ejecuta la aplicación en un emulador de Android o en un dispositivo Android conectado utilizando el siguiente comando:
+
+ flutter run
+
+
+ 
+## Contribución
+
+Si deseas contribuir a este proyecto, ¡eres bienvenido! Siéntete libre de enviar pull requests y mejoras.
+
+## Creador
+
+Esta aplicación fue creada por **Deibi Ocampo**, ingeniero de sistemas.
+
+- Correo Electrónico: telecentro.lasierra@gmail.com
+- Teléfono: +573128389642
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+
+
+
+
 
