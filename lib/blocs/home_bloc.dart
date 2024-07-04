@@ -9,8 +9,8 @@ import 'package:omni_test/data/repository/photo_repository_imp.dart';
 
 class HomeBloc extends Bloc<HomeEvent, BlocState> {
   final PhotoRepositoryImpl photoRepositoryImpl;
-  final int itemsPerPage = 10; // Cantidad de elementos por página
-  int currentPage = 1; // Página actual
+  final int itemsPerPage = 10; 
+  int currentPage = 1; 
   List<Photo> currentPhotos = [];
   List<Photo> allPhotos = [];
   HomeBloc({
@@ -28,10 +28,10 @@ class HomeBloc extends Bloc<HomeEvent, BlocState> {
       state.fold(
         (error) => ErrorState(failure: error),
         (data) {
-          allPhotos = data; // Almacena todos los datos de fotos
+          allPhotos = data; 
           final photosToAdd = allPhotos
               .take(itemsPerPage)
-              .toList(); // Obtiene los primeros 10 elementos
+              .toList(); 
           currentPhotos.addAll(photosToAdd);
           return DataState(photos: currentPhotos);
         },
