@@ -47,7 +47,7 @@ void main() {
       final result = await repository.getPhotos();
 
       // Assert
-      expect(result, left(CommonFailure.noData(message: 'Data not found')));
+      expect(result, left(const CommonFailure.noData(message: 'Data not found')));
       verify(mockPhotoService.getPhotos()).called(1);
       verifyNoMoreInteractions(mockPhotoService);
     });
@@ -60,7 +60,7 @@ void main() {
       final result = await repository.getPhotos();
 
       // Assert
-      expect(result, left(CommonFailure.noConnection(message: 'Something went wrong')));
+      expect(result, left(const CommonFailure.noConnection(message: 'Something went wrong')));
       verify(mockPhotoService.getPhotos()).called(1);
       verifyNoMoreInteractions(mockPhotoService);
     });

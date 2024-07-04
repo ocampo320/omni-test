@@ -6,7 +6,8 @@ import 'package:omni_test/blocs/home_state.dart';
 import 'package:omni_test/core/constants/app_localizations.dart';
 import 'package:omni_test/core/typographies.dart';
 import 'package:omni_test/presentation/widgets/error_container.dart';
-import 'package:transparent_image/transparent_image.dart';
+import 'package:shimmer/shimmer.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ListCard extends StatelessWidget {
   const ListCard({Key? key}) : super(key: key);
@@ -26,6 +27,7 @@ class ListCard extends StatelessWidget {
             itemCount: currentPhotos.length + 1,
             itemBuilder: (context, index) {
               if (index < currentPhotos.length) {
+                final photo = currentPhotos[index];
                 return Padding(
                   padding: const EdgeInsets.all(15),
                   child: Column(
@@ -35,9 +37,29 @@ class ListCard extends StatelessWidget {
                         height: MediaQuery.of(context).size.height * 0.3,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
-                          child: FadeInImage.memoryNetwork(
-                            image: currentPhotos[index].thumbnailUrl ?? "",
-                            placeholder: kTransparentImage,
+                          child: CachedNetworkImage(
+                            errorListener: (value) => Container(
+                              color: Colors.red,
+                              child: Center(
+                                child: Text(
+                                  localizations.getLocalizedValue("loadError"),
+                                ),
+                              ),
+                            ),
+                            imageUrl: photo.thumbnailUrl ?? "",
+                            placeholder: (context, url) => Shimmer.fromColors(
+                              baseColor: Colors.grey[300]!,
+                              highlightColor: Colors.grey[100]!,
+                              child: Container(color: Colors.white),
+                            ),
+                            errorWidget: (context, url, error) => Container(
+                              color: Colors.red,
+                              child: Center(
+                                child: Text(
+                                  localizations.getLocalizedValue("loadError"),
+                                ),
+                              ),
+                            ),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -54,7 +76,7 @@ class ListCard extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: Text(
-                            currentPhotos[index].title ?? "",
+                            photo.title ?? "",
                             style: AppTypography.stRaleway(
                               fontSize: 16,
                               color: Colors.black,

@@ -27,11 +27,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    context.read<HomeBloc>().add(HomeStarted());
+    final localizations = AppLocalizations.of(context);
+  
     return BlocBuilder<HomeBloc, BlocState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            title: Text(
+              localizations.getLocalizedValue("photoList"),
+            ),
+            centerTitle: true,
+          ),
           body: const SafeArea(
             child: ListCard(),
           ),

@@ -45,6 +45,4 @@ class AppLocalizations {
 
 
 
-  String get tryAgain => getLocalizedValue('load');
-
 }

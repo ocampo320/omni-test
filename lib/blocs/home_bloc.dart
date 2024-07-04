@@ -16,11 +16,11 @@ class HomeBloc extends Bloc<HomeEvent, BlocState> {
   HomeBloc({
     required this.photoRepositoryImpl,
   }) : super(const InitialState()) {
-    on<HomeStarted>(_getNews);
+    on<HomeStarted>(_getDataPhotos);
     on<LoadMorePhotos>(_loadMorePhotos);
   }
 
-  FutureOr<void> _getNews(HomeStarted event, Emitter<BlocState> emit) async {
+  FutureOr<void> _getDataPhotos(HomeStarted event, Emitter<BlocState> emit) async {
     emit(const LoadingState());
 
     final state = await photoRepositoryImpl.getPhotos();

@@ -1,4 +1,3 @@
-import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -32,7 +31,7 @@ void main() {
       );
 
       // Emitir el estado de carga
-      homeBloc.emit(LoadingState());
+      homeBloc.emit(const LoadingState());
 
       // Esperar a que la interfaz de usuario se reconstruya
       await tester.pump();
