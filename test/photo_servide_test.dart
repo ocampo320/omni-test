@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:test/test.dart';
 import 'package:http/http.dart' as http;
 import 'package:nock/nock.dart';

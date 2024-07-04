@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:omni_test/blocs/home_bloc.dart';
 import 'package:omni_test/blocs/home_state.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:omni_test/data/repository/photo_repository_imp.dart';
 import 'package:omni_test/presentation/widgets/list_card.dart';
 

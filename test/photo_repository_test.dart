@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:omni_test/core/failures/common_failure.dart';
 import 'package:omni_test/core/global_exceptions.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:omni_test/data/repository/photo_repository.dart';
 import 'package:omni_test/data/repository/photo_repository_imp.dart';
 

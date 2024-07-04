@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _initRemoteConfig();
   }
 
+  @override
   Widget build(BuildContext context) {
     context.read<HomeBloc>().add(HomeStarted());
     return BlocBuilder<HomeBloc, BlocState>(

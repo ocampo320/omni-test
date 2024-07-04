@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:omni_test/blocs/home_event.dart';
 import 'package:omni_test/blocs/home_state.dart';
 import 'package:omni_test/core/failures/common_failure.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:omni_test/data/repository/photo_repository_imp.dart';
 
 class HomeBloc extends Bloc<HomeEvent, BlocState> {
