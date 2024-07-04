@@ -1,11 +1,10 @@
-import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:omni_test/blocs/home_bloc.dart';
 import 'package:omni_test/blocs/home_state.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:omni_test/data/repository/photo_repository_imp.dart';
 import 'package:omni_test/presentation/widgets/list_card.dart';
 
@@ -32,7 +31,7 @@ void main() {
       );
 
       // Emitir el estado de carga
-      homeBloc.emit(LoadingState());
+      homeBloc.emit(const LoadingState());
 
       // Esperar a que la interfaz de usuario se reconstruya
       await tester.pump();

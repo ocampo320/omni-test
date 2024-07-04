@@ -1,5 +1,5 @@
  import 'package:omni_test/core/failures/common_failure.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 
 abstract class BlocState {
   const BlocState();

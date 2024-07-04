@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:omni_test/core/failures/common_failure.dart';
 import 'package:omni_test/core/global_exceptions.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:omni_test/data/repository/photo_repository.dart';
 import 'package:omni_test/data/repository/photo_repository_imp.dart';
 
@@ -47,7 +47,7 @@ void main() {
       final result = await repository.getPhotos();
 
       // Assert
-      expect(result, left(CommonFailure.noData(message: 'Data not found')));
+      expect(result, left(const CommonFailure.noData(message: 'Data not found')));
       verify(mockPhotoService.getPhotos()).called(1);
       verifyNoMoreInteractions(mockPhotoService);
     });
@@ -60,7 +60,7 @@ void main() {
       final result = await repository.getPhotos();
 
       // Assert
-      expect(result, left(CommonFailure.noConnection(message: 'Something went wrong')));
+      expect(result, left(const CommonFailure.noConnection(message: 'Something went wrong')));
       verify(mockPhotoService.getPhotos()).called(1);
       verifyNoMoreInteractions(mockPhotoService);
     });

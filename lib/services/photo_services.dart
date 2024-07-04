@@ -1,30 +1,30 @@
 import 'dart:convert';
-import 'package:omni_test/data/models/Photo.dart';
 import 'package:http/http.dart' as http;
+import 'package:omni_test/data/models/photo.dart';
 
 class PhotoService {
   PhotoService();
+
   Future<List<Photo>> getPhotos() async {
     try {
-      const String url = "https://jsonplaceholder.typicode.com/photos";
-      const header = {'Content-Type': 'application/json'};
+      const url = "https://jsonplaceholder.typicode.com/photos";
+      final headers = {'Content-Type': 'application/json'};
+
       final http.Response photoResponse =
-          await http.get(Uri.parse(url), headers: header);
+          await http.get(Uri.parse(url), headers: headers);
 
       if (photoResponse.statusCode == 200) {
-        final jsonData = json.decode(photoResponse.body) as List<dynamic>;
+        final List<dynamic> jsonData = json.decode(photoResponse.body);
+        final List<Photo> photos =
+            List<Photo>.from(jsonData.map((data) => Photo.fromJson(data)));
 
-        final List<Photo> photos = jsonData.map((data) {
-          return Photo.fromJson(
-              data); 
-        }).toList();
-      
         return photos;
       } else {
-        throw Exception(   "Error al consumir el servicio");
+        throw Exception(
+            "Error: ${photoResponse.statusCode} - Error al consumir el servicio");
       }
     } catch (e) {
-      throw 'Error en la llamada a la API: $e';
+      throw Exception('Error en la llamada a la API: $e');
     }
   }
 }

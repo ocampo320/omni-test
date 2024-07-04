@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:omni_test/core/failures/common_failure.dart';
-import 'package:omni_test/data/models/Photo.dart';
+import 'package:omni_test/data/models/photo.dart';
 import 'package:omni_test/data/repository/photo_repository.dart';
 
 class FakePhotoRepositoryImpl implements PhotoRepository {
